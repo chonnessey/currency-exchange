@@ -4,17 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import './css/styles.css'
 import Currency from './currency-service.js'
 
-function getExchange(response) {
-  if (response) {
-    let mexicoConversion = $("#exchange").val() * response.conversion_rates.MXN;
-    let australiaConversion = $("#exchange").val() * response.conversion_rates.AUD;
-    let euroConversion = $('#exchange').val() * response.conversion_rates.EUR;
-    $('#mexico-results').html(`<p>${mexicoConversion}</p>`)
-    $('#australia-results').html(`<p>${australiaConversion}</p>`)
-    $('#euro-results').html(`<p>${euroConversion}</p>`)
-  }
-}
-
 $(document).ready(function() {
   $('#dollars').submit(function(event) {
     event.preventDefault();
@@ -25,3 +14,36 @@ $(document).ready(function() {
     })
   })
 })
+
+function getExchange(response) {
+  if (response) {
+    $('#mexico').click(function() {
+      let mexicoConversion = $("#exchange").val() * response.conversion_rates.MXN;
+      $('#results').html(`<p>${mexicoConversion}</p>`)
+    })
+    $('#australia').click(function() {
+      let australiaConversion = $("#exchange").val() * response.conversion_rates.AUD;
+      $('#results').html(`<p>${australiaConversion}</p>`)
+    })
+    $('#euro').click(function() {
+      let euroConversion = $('#exchange').val() * response.conversion_rates.EUR;
+      $('#results').html(`<p>${euroConversion}</p>`)
+    })
+    $('#hong-kong').click(function() {
+      let hongKongConversion = $('#exchange').val() * response.conversion_rates.HKD;
+      $('#results').html(`<p>${hongKongConversion}</p>`)
+    })
+    $('#croatia').click(function() {
+      let croatiaConversion = $('#exchange').val() * response.conversion_rates.HRK;
+      $('#results').html(`<p>${croatiaConversion}</p>`)
+    })
+    $('#north-korea').click(function() {
+      let northKoreaConversion = $('#exchange').val() * response.conversion_rates.KPW;
+      $('#results').html(`<p>${northKoreaConversion}</p>`)
+    })
+  }
+}
+
+
+
+
