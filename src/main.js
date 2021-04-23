@@ -8,7 +8,6 @@ function getExchange(response) {
   if (response) {
     let mexicoConversion = $("#exchange").val() * response.conversion_rates.MXN;
     $('#results').html(`<p>${mexicoConversion}</p>`)
-    console.log(mexicoConversion);
   }
 }
 

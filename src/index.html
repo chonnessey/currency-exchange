@@ -12,12 +12,21 @@
       <form id="dollars">
         <div class="form-group">
           <label for="exchange">Input any US dollar amount to get the currency exchange from various countries!</label>
-          <input id="exchange" type="text" class="form-control">
+          <input id="exchange" type="text" class="form-control" required>
         </div>
-        <button class="btn btn-success btn-lg" type="submit" id="pesos">Mexican Peso</button>
+        <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="btn-group" role="group" aria-label="First group">
+            <button type="submit" class="btn btn-success" id="mexico">Mexican Peso</button>
+            <button type="submit" class="btn btn-success" id="australia">Australian Dollar</button>
+            <button type="submit" class="btn btn-success" id="euro">Euro</button>
+            <button type="submit" class="btn btn-success" id="hong-kong">Hong Kong Dollar</button>
+            <button type="submit" class="btn btn-success" id="croatia">Croatian Kuna</button>
+            <button type="submit" class="btn btn-success" id="north-korea">North Korean Won</button>
+          </div>
+        </div>
       </form>
       <div id="results">
-        
+
       </div>
     </div>
 
