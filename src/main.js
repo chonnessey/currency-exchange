@@ -7,7 +7,9 @@ import Currency from './currency-service.js'
 function getExchange(response) {
   if (response) {
     let mexicoConversion = $("#exchange").val() * response.conversion_rates.MXN;
-    $('#results').html(`<p>${mexicoConversion}</p>`)
+    let australiaConversion = $("#exchange").val() * response.conversion_rates.AUD;
+    $('#mexico-results').html(`<p>${mexicoConversion}</p>`)
+    $('#australia-results').html(`<p>${australiaConversion}</p>`)
   }
 }
 
