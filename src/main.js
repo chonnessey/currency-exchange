@@ -8,8 +8,10 @@ function getExchange(response) {
   if (response) {
     let mexicoConversion = $("#exchange").val() * response.conversion_rates.MXN;
     let australiaConversion = $("#exchange").val() * response.conversion_rates.AUD;
+    let euroConversion = $('#exchange').val() * response.conversion_rates.EUR;
     $('#mexico-results').html(`<p>${mexicoConversion}</p>`)
     $('#australia-results').html(`<p>${australiaConversion}</p>`)
+    $('#euro-results').html(`<p>${euroConversion}</p>`)
   }
 }
 
