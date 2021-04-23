@@ -41,6 +41,10 @@ function getExchange(response) {
       let northKoreaConversion = $('#exchange').val() * response.conversion_rates.KPW;
       $('#results').html(`<p>${northKoreaConversion}</p>`)
     })
+  } else if (response === !isNaN) {
+    $('#error').html(`<p>Please enter a vaild number</p>`)
+  } else {
+    $('#error').html(`There seems to an error: ${response.message}`)
   }
 }
 
