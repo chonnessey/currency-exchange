@@ -47,3 +47,4 @@ function getExchange(response) {
 
 
 
+
