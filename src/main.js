@@ -6,4 +6,4 @@ import PokeService from './currency-service.js'
 
 console.log(PokeService);
 
-$("section").text("TEST TEXT INPUT")
+$ 
